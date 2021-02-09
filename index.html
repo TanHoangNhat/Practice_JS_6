@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container py-4 px-5 bg-dark text-white">
+            <div class="row">
+                <div class="col-md-4 header__logo">
+                    <a href="index.html">
+                        <h1 class="text-uppercase m-0">BC06</h1>
+                    </a>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-6 text-right header__title d-flex justify-content-end flex-wrap align-items-center">
+                    <h1 class="text-uppercase m-0 w-100">Hoàng Nhật Tân</h1>
+                    <h3 class="m-0 w-100">Bài tập JavaScript - Buổi 6</h3>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Body -->
+    <section class="exercise">
+        <div class="container">
+            <div class="row">
+                <ul class="nav nav-pills col-md-2 w-100 px-0">
+                    <li class="nav-item">
+                        <a class="nav-link px-5 py-3 active" data-toggle="pill" href="#exercise__1"><span>Bài tập
+                                1</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-5 py-3" data-toggle="pill" href="#exercise__2"><span>Bài tập 2</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-5 py-3" data-toggle="pill" href="#exercise__3"><span>Bài tập 3</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-5 py-3" data-toggle="pill" href="#exercise__4"><span>Bài tập 4</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-5 py-3" data-toggle="pill" href="#exercise__5"><span>Bài tập 5</span></a>
+                    </li>
+                </ul>
+
+                <div class="tab-content p-0 exercise__content col-md-10">
+                    <div class="tab-pane exercise__item h-100 active" id="exercise__1">
+                        <div class="card h-100">
+                            <div class="pl-5 card-header">
+                                <h2>Tìm số nguyên dương thỏa điều kiện</h2>
+                            </div>
+                            <div class="pl-5 card-body">
+                                <h4 class="card-title my-4 p-0">Tìm số nguyên dương nhỏ nhất sao cho: 1 + 2 + ... + n > X</h4>
+                                <div class="row my-5 mx-0">
+                                    <input id="txtLimitNumber" class="form-control col-md-3" type="number"
+                                        placeholder="Nhập vào số giới hạn X">
+                                </div>
+                                <button id="btnFindNumber" class="col-md-3 btn">Kết quả<span>Kết quả</span></button>
+                            </div>
+                            <div class="pl-5 card-footer">
+                                <h2 id="txtResult__1">Kết quả: </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane exercise__item h-100 fade" id="exercise__2">
+                        <div class="card h-100">
+                            <div class="pl-5 card-header">
+                                <h2>Tính tổng</h2>
+                            </div>
+                            <div class="pl-5 card-body">
+                                <h4 class="card-title my-4">Tính tổng theo công thức: S(n) = x + x^2 + x^3 + ... + x^n</h4>
+                                <div class="row my-5 mx-0 p-0">
+                                    <input id="txtNumberX" class="form-control mr-3 col-md-3" type="text"
+                                        placeholder="Nhập vào số x">
+                                    <input id="txtNumberN" class="form-control mr-3 col-md-3" type="number"
+                                        placeholder="Nhập vào số n">
+                                </div>
+                                <div class="row my-5 mx-0 p-0">
+                                    <button id="btnCalcSum" class="btn col-md-3">Tính tổng<span>Tính tổng</span></button>
+                                </div>
+
+                            </div>
+                            <div class="pl-5 card-footer">
+                                <h2 id="txtResult__2">Kết quả: </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane exercise__item h-100 fade" id="exercise__3">
+                        <div class="card h-100">
+                            <div class="pl-5 card-header">
+                                <h2>Tính tiền điện</h2>
+                            </div>
+                            <div class="pl-5 card-body">
+                                <h4 class="card-title my-4">Nhập vào thông tin tiêu thụ điện</h4>
+                                <div class="row my-5 mx-0 p-0">
+                                    <input id="txtName" class="form-control mr-3 col-md-2" type="text"
+                                        placeholder="Họ và Tên">
+                                    <input id="txtKW" class="form-control mr-3 col-md-2" type="number"
+                                        placeholder="Số Kw điện">
+                                </div>
+                                <button id="btnCountElectricMoney" class="col-md-2 btn">Tính tiền điện<span>Tính tiền
+                                        điện</span></button>
+                            </div>
+                            <div class="pl-5 card-footer">
+                                <h2 id="txtResult__3">Kết quả: </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane exercise__item h-100 fade" id="exercise__4">
+                        <div class="card h-100">
+                            <div class="pl-5 card-header">
+                                <h2>Tính tiền cáp</h2>
+                            </div>
+                            <div class="pl-5 card-body">
+                                <h4 class="card-title my-4">Nhập vào thông tin khách hàng</h4>
+                                <div class="row col-md-12 my-5 mx-0 p-0">
+                                    <div class="form-check col-md-2">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="radioCustomerType"
+                                                id="radioPersonal" value="1" onclick="check()" checked>&nbsp;&nbsp;Cá
+                                            nhân
+                                        </label>
+                                    </div>
+                                    <div class="form-check col-md-2">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="radioCustomerType"
+                                                id="radioEnterprise" value="2" onclick="check()">&nbsp;&nbsp;Doanh
+                                            nghiệp
+                                        </label>
+                                    </div>
+                                    <input id="txtChannel" class="form-control mr-3 col-md-2" type="text"
+                                        placeholder="Số kênh cao cấp">
+                                    <input id="txtConnection" class="form-control mr-3 col-md-2" type="number"
+                                        placeholder="Số kết nối">
+                                </div>
+                                <button id="btnCountCost" class="col-md-2 btn">Tính tiền cáp<span>Tính tiền
+                                        cáp</span></button>
+                            </div>
+                            <div class="pl-5 card-footer">
+                                <h2 id="txtResult__4">Kết quả: </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane exercise__item h-100 fade" id="exercise__5">
+                        <div class="card h-100">
+                            <div class="pl-5 card-header">
+                                <h2>Tính tiền cáp</h2>
+                            </div>
+                            <div class="pl-5 card-body">
+                                <h4 class="card-title my-4">Nhập vào thông tin khách hàng</h4>
+                                <div class="row col-md-12 my-5 mx-0 p-0">
+                                    <div class="form-check col-md-2">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="radioCustomerType"
+                                                id="radioPersonal" value="1" onclick="check()" checked>&nbsp;&nbsp;Cá
+                                            nhân
+                                        </label>
+                                    </div>
+                                    <div class="form-check col-md-2">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="radioCustomerType"
+                                                id="radioEnterprise" value="2" onclick="check()">&nbsp;&nbsp;Doanh
+                                            nghiệp
+                                        </label>
+                                    </div>
+                                    <input id="txtChannel" class="form-control mr-3 col-md-2" type="text"
+                                        placeholder="Số kênh cao cấp">
+                                    <input id="txtConnection" class="form-control mr-3 col-md-2" type="number"
+                                        placeholder="Số kết nối">
+                                </div>
+                                <button id="btnCountCost" class="col-md-2 btn">Tính tiền cáp<span>Tính tiền
+                                        cáp</span></button>
+                            </div>
+                            <div class="pl-5 card-footer">
+                                <h2 id="txtResult__4">Kết quả: </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center text-white bg-dark py-5">
+            <h1 class="mt-5 text-uppercase"><a target="_blank" href="https://cybersoft.edu.vn/">cybersoft.edu.vn</a>
+            </h1>
+            <h4 class="mb-4 mt-4">82 Ung Van Khiem - Binh Thanh District - Ho Chi Minh City</h4>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="./js/baitap_1.js"></script>
+    <script src="./js/baitap_2.js"></script>
+    <script src="./js/baitap_3.js"></script>
+    <script src="./js/baitap_4.js"></script>
+</body>
+
+</html>

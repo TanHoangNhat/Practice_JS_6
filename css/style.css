@@ -1,0 +1,249 @@
+/* Header */
+
+:root {
+    --color__1: #64ffff;
+    --color__2: #00cdce;
+    --color__3: #009b9d;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+header .header__logo a {
+    text-decoration: none;
+    display: inline-block;
+    outline: none;
+}
+
+header .header__logo a:hover h1 {
+    /* color: rgba(255, 255, 255, 0.6); */
+    /* text-shadow: 0px 0px 1.5rem rgba(255, 255, 255, 0.6); */
+    color: var(--color__1);
+    text-shadow: 0px 0px 2rem var(--color__1);
+}
+
+header .header__logo h1 {
+    color: var(--color__2);
+    font-size: 7rem;
+    transition: .4s linear;
+    letter-spacing: .5rem;
+}
+
+header .header__title h1 {
+    font-size: 3rem;
+    letter-spacing: .2rem;
+}
+
+header .header__title h3 {
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+}
+
+/* Exercise */
+
+.exercise .container {}
+
+.exercise ul {
+    display: block;
+    background: #5e646b;
+}
+
+.exercise ul li a {
+    color: rgba(0, 0, 0, 0.8) !important;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 5rem;
+    font-weight: 700;
+    position: relative;
+    transition: .4s all;
+    letter-spacing: 1px;
+    overflow: hidden;
+    border-radius: 0 !important;
+}
+
+.exercise ul li a.active, .exercise ul li a:hover {
+    font-size: 2rem;
+    letter-spacing: .3rem;
+}
+
+.exercise ul li a span {
+    position: relative;
+    z-index: 1;
+}
+
+.exercise ul li a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(-2rem, -50%);
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: .8rem solid transparent;
+    border-bottom: .8rem solid transparent;
+    border-left: 1.2rem solid var(--color__3);
+    z-index: 4;
+    transition: .4s all;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(1.3rem, -50%);
+    }
+
+    50% {
+        transform: translate(.7rem, -50%);
+    }
+
+    100% {
+        transform: translate(1.3rem, -50%);
+    }
+}
+
+.exercise ul li a.active::before, .exercise ul li a:hover::before {
+    transform: translate(.8rem, -50%);
+}
+
+.exercise ul li a.active::before {
+    animation: move 2s ease-in-out .5s infinite;
+}
+
+.exercise ul li a::after {
+    content: "";
+    background-color: var(--color__1);
+    width: 0%;
+    height: 100%;
+    border-bottom: 4px solid var(--color__3);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .4s all;
+}
+
+.exercise ul li a:hover::after, .exercise ul li a.active::after {
+    width: 100%;
+    /* height: 100%; */
+}
+
+.exercise__content .exercise__item .card {
+    position: relative;
+    border: none;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-radius: 0;
+}
+
+.exercise__content .exercise__item .card-header,
+.exercise__content .exercise__item .card-footer {
+    border: none;
+    background-color: #8b9299;
+    border-radius: 0;
+    border-bottom: 4px solid #343a40;
+}
+
+.exercise__content .exercise__item .card-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.exercise__content .exercise__item .card-header h2,
+.exercise__content .exercise__item .card-footer h2 {
+    line-height: 4.6rem;
+    font-size: 2.5rem;
+    letter-spacing: .1rem;
+}
+
+.exercise__content .exercise__item .card-body {
+    background-color: #bbc2ca;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.exercise .exercise__content .exercise__item input,
+.exercise .exercise__content .exercise__item button,
+.exercise .exercise__content .exercise__item select, 
+.exercise .exercise__content .exercise__item label {
+    font-size: 1.5rem;
+}
+
+.exercise .exercise__content .exercise__item button {
+    /* background: var(--color__1); */
+    background: linear-gradient(45deg, var(--color__2), var(--color__1));
+
+    border-radius: 0;
+    font-weight: 500;
+    transition: .4s all;
+    outline: none !important;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.exercise .exercise__content .exercise__item button span {
+    position: absolute;
+    padding: .375rem .75rem;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transform: translateY(-50%);
+}
+
+.exercise .exercise__content .exercise__item button::after {
+    content: "";
+    top: 0;
+    left: -20%;
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(45deg, var(--color__2), var(--color__1), var(--color__2));
+    transform: skew(45deg);
+    transition: .4s all;
+}
+
+
+
+.exercise .exercise__content .exercise__item button:focus {
+    box-shadow: none;
+}
+
+.exercise .exercise__content .exercise__item button:enabled:hover::after {
+    /* background: var(--color__2);
+    transition: .4s all; */
+    width: 140%;
+}
+
+footer > div {
+    border-top: 1px solid #5e646b;
+}
+
+footer h1 a {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+    color: var(--color__2);
+    text-decoration: none;
+    transition: .4s linear;
+}
+
+footer h1 a:hover {
+    text-decoration: none;
+    color: var(--color__1);
+    text-shadow: 0px 0px 2rem var(--color__1);
+}
+
+footer h4 {
+    letter-spacing: .2rem;
+}
