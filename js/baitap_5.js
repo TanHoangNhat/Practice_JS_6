@@ -26,24 +26,28 @@ document.getElementById("btnFindSNT").addEventListener("click", function () {
         result = "Vui lòng nhập vào số nguyên!";
     } else if (num <= 0) {
         result = "Giá trị nhập vào phải lớn hơn 0!"
+    } else if (num == 1) {
+        result = "Không có số nguyên tố nào bé hơn " + num;
     } else {
         // Theo định nghĩa thì những số nào lớn hơn 1 và chỉ chia hết cho 1 và chính nó là số nguyên tố
         // => Vòng lặp chạy từ 2
+        result = "Kết quả: ";
         for (var i = 2; i <= num; i++) {
-            if (i == 2) {
-                result += i + " ";
-            }
-            else if (checkSNT(i) == true) {
+            if (checkSNT(i) == true) {
                 result += i + " ";
             }
         }
     }
 
-    document.getElementById("txtResult__5").innerHTML = "Kết quả: " + result;
+    document.getElementById("txtResult__5").innerHTML = result;
 });
 
 function checkSNT(number) {
     var check = false;
+
+    if (number == 2) {
+        return check = true;
+    }
 
     for (var i = 2; i < number; i++) {
         if (number % i == 0) {

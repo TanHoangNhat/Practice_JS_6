@@ -24,3 +24,10 @@ document.getElementById("btnCreateDiv").addEventListener("click", function () {
         document.getElementById("txtResult__4").appendChild(div);
     }
 });
+
+document.getElementById("btnRemoveDiv").addEventListener("click", function () {
+    var parent = document.getElementById("txtResult__4");
+    while (parent.childNodes.length > 2) {
+        parent.removeChild(parent.childNodes[parent.childNodes.length - 1]);
+    }
+});

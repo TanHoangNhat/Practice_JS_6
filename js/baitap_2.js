@@ -3,6 +3,7 @@
  * * Đầu vào (input)
  * * * Lấy dữ liệu từ người dùng nhập vào
  * * *      => var numberX, var nunberN
+ * * * Theo đề bài thì chấp nhận số X là số âm, còn N bắt buộc là số dương
  * * Xử lý
  * * * Tạo hàm tính tổng, tham số là numberX, numberN
  * * * Bên trong hàm, tạo biến sum để lưu kết quả => var sum
