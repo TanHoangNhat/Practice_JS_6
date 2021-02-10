@@ -24,9 +24,11 @@ document.getElementById("btnFindSNT").addEventListener("click", function () {
 
     if (isNaN(num)) {
         result = "Vui lòng nhập vào số nguyên!";
-    } else if (num < 0) {
+    } else if (num <= 0) {
         result = "Giá trị nhập vào phải lớn hơn 0!"
     } else {
+        // Theo định nghĩa thì những số nào lớn hơn 1 và chỉ chia hết cho 1 và chính nó là số nguyên tố
+        // => Vòng lặp chạy từ 2
         for (var i = 2; i <= num; i++) {
             if (i == 2) {
                 result += i + " ";
