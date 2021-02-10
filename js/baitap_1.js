@@ -1,39 +1,50 @@
 /**
  * Mô hình 3 khối
  * * Đầu vào (input)
- * * * Lấy dữ liệu từ người dùng nhập vào
- * * *      => var numberX, var nunberN
+ * * * Lấy giá trị nhập vào của người dùng
+ * * *      => var limitNumber
  * * Xử lý
- * * * Tạo hàm tính tổng, tham số là numberX, numberN
- * * * Bên trong hàm, tạo biến sum để lưu kết quả => var sum
- * * * Dùng vòng lặp for i chạy từ 1 đến numberN
- * * * Bên trong vòng lặp for, tính sum += Math.pow(x, i)
- * * * Khi vòng lặp dừng, hàm trả về biến sum là kết quả
+ * * * Tạo hàm tìm số, tham số nhập vào là limitNumber
+ * * * Tạo biến total để chứa giá trị so sánh
+ * * * Tạo biến number = 0 là biến chạy;
+ * * * Bên trong hàm dùng vòng lặp while với điều kiện numbeer < limitNumber
+ * * *      => total += number;
+ * * * Dừng vòng lặp, có được kết quả number
  * * Đầu ra (output)
  * * * Xuất kết quả ra màn hình
  */
 
-document.getElementById("btnCalcSum").addEventListener("click", function () {
-    var numberX = parseInt(document.getElementById("txtNumberX").value);
-    var numberN = parseInt(document.getElementById("txtNumberN").value);
+document.getElementById("btnFindNumber").addEventListener("click", function () {
+    var limitNumber = parseInt(document.getElementById("txtLimitNumber").value);
 
     var result = "";
 
-    if (isNaN(numberN) || isNaN(numberX)) {
-        result = "Vui lòng nhập vào đủ x và n!!!";
-    } else if (numberN <= 0) {
-        result = "Số n phải lớn hơn 0!!!";
+    if (isNaN(limitNumber)) {
+        result = "Vui lòng nhập vào số giới hạn!";
+    } else if (limitNumber <= 0) {
+        result = "Số giới hạn phải lớn hơn 0";
     } else {
-        result = "Kết quả: Tìm được tổng là " + calcSum(numberX, numberN);
+        if (findNumber(limitNumber) != 0) {
+            result = "Kết quả: Số cần tìm thỏa điều kiện là " + findNumber(limitNumber);
+        } else {
+            result = "Không tìm được kết quả!";
+        }
     }
-    document.getElementById("txtResult__2").innerHTML = result;
+    document.getElementById("txtResult__1").innerHTML = result;
 });
 
-function calcSum(numberX, numberN) {
-    var sum = 0;
-    for (var i = 1; i <= numberN; i++) {
-        sum += Math.pow(numberX, i);
+function findNumber(limitNumber) {
+    var total = 0;
+    var number = 0;
+
+    if (limitNumber == 1) {
+        return number;
     }
 
-    return sum;
+    while (total <= limitNumber) {
+        number++;
+        total += number;
+    }
+
+    return number;
 }

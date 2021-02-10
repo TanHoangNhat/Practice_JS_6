@@ -70,7 +70,8 @@
                                 <h2>Tìm số nguyên dương thỏa điều kiện</h2>
                             </div>
                             <div class="pl-5 card-body">
-                                <h4 class="card-title my-4 p-0">Tìm số nguyên dương nhỏ nhất sao cho: 1 + 2 + ... + n > X</h4>
+                                <h4 class="card-title my-4 p-0">Tìm số nguyên dương nhỏ nhất sao cho: 1 + 2 + ... + n >
+                                    X</h4>
                                 <div class="row my-5 mx-0">
                                     <input id="txtLimitNumber" class="form-control col-md-3" type="number"
                                         placeholder="Nhập vào số giới hạn X">
@@ -88,7 +89,8 @@
                                 <h2>Tính tổng</h2>
                             </div>
                             <div class="pl-5 card-body">
-                                <h4 class="card-title my-4">Tính tổng theo công thức: S(n) = x + x^2 + x^3 + ... + x^n</h4>
+                                <h4 class="card-title my-4">Tính tổng theo công thức: S(n) = x + x^2 + x^3 + ... + x^n
+                                </h4>
                                 <div class="row my-5 mx-0 p-0">
                                     <input id="txtNumberX" class="form-control mr-3 col-md-3" type="text"
                                         placeholder="Nhập vào số x">
@@ -96,7 +98,8 @@
                                         placeholder="Nhập vào số n">
                                 </div>
                                 <div class="row my-5 mx-0 p-0">
-                                    <button id="btnCalcSum" class="btn col-md-3">Tính tổng<span>Tính tổng</span></button>
+                                    <button id="btnCalcSum" class="btn col-md-3">Tính tổng<span>Tính
+                                            tổng</span></button>
                                 </div>
 
                             </div>
@@ -108,18 +111,15 @@
                     <div class="tab-pane exercise__item h-100 fade" id="exercise__3">
                         <div class="card h-100">
                             <div class="pl-5 card-header">
-                                <h2>Tính tiền điện</h2>
+                                <h2>Tính giai thừa của số nguyên</h2>
                             </div>
                             <div class="pl-5 card-body">
-                                <h4 class="card-title my-4">Nhập vào thông tin tiêu thụ điện</h4>
+                                <h4 class="card-title my-4">Nhập vào số cần tính giai thừa</h4>
                                 <div class="row my-5 mx-0 p-0">
-                                    <input id="txtName" class="form-control mr-3 col-md-2" type="text"
-                                        placeholder="Họ và Tên">
-                                    <input id="txtKW" class="form-control mr-3 col-md-2" type="number"
-                                        placeholder="Số Kw điện">
+                                    <input id="txtNumber" class="form-control mr-3 col-md-2" type="text">
                                 </div>
-                                <button id="btnCountElectricMoney" class="col-md-2 btn">Tính tiền điện<span>Tính tiền
-                                        điện</span></button>
+                                <button id="btnFactorial" class="col-md-2 btn">Tính giai thừa<span>Tính giai
+                                        thừa</span></button>
                             </div>
                             <div class="pl-5 card-footer">
                                 <h2 id="txtResult__3">Kết quả: </h2>
@@ -129,70 +129,33 @@
                     <div class="tab-pane exercise__item h-100 fade" id="exercise__4">
                         <div class="card h-100">
                             <div class="pl-5 card-header">
-                                <h2>Tính tiền cáp</h2>
+                                <h2>Tạo thẻ div tự động</h2>
                             </div>
                             <div class="pl-5 card-body">
-                                <h4 class="card-title my-4">Nhập vào thông tin khách hàng</h4>
-                                <div class="row col-md-12 my-5 mx-0 p-0">
-                                    <div class="form-check col-md-2">
-                                        <label class="form-check-label">
-                                            <input type="radio" class="form-check-input" name="radioCustomerType"
-                                                id="radioPersonal" value="1" onclick="check()" checked>&nbsp;&nbsp;Cá
-                                            nhân
-                                        </label>
-                                    </div>
-                                    <div class="form-check col-md-2">
-                                        <label class="form-check-label">
-                                            <input type="radio" class="form-check-input" name="radioCustomerType"
-                                                id="radioEnterprise" value="2" onclick="check()">&nbsp;&nbsp;Doanh
-                                            nghiệp
-                                        </label>
-                                    </div>
-                                    <input id="txtChannel" class="form-control mr-3 col-md-2" type="text"
-                                        placeholder="Số kênh cao cấp">
-                                    <input id="txtConnection" class="form-control mr-3 col-md-2" type="number"
-                                        placeholder="Số kết nối">
+                                <h4 class="card-title my-4">Click vào nút bên dưới để thấy phép nhiệm màu!</h4>
+                                <div class="col-md-12 my-5 mx-0 p-0">
+                                    <button id="btnCreateDiv" class="col-md-2 btn">Tạo thẻ div<span>Tạo thẻ div</span></button>
                                 </div>
-                                <button id="btnCountCost" class="col-md-2 btn">Tính tiền cáp<span>Tính tiền
-                                        cáp</span></button>
                             </div>
-                            <div class="pl-5 card-footer">
-                                <h2 id="txtResult__4">Kết quả: </h2>
+                            <div id="txtResult__4" class="row m-0 pl-5 card-footer">
+                                <h2 class="col-md-2 p-0">Kết quả: </h2>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane exercise__item h-100 fade" id="exercise__5">
                         <div class="card h-100">
                             <div class="pl-5 card-header">
-                                <h2>Tính tiền cáp</h2>
+                                <h2>Tìm số nguyên tố</h2>
                             </div>
                             <div class="pl-5 card-body">
-                                <h4 class="card-title my-4">Nhập vào thông tin khách hàng</h4>
+                                <h4 class="card-title my-4">Nhập vào số nguyên</h4>
                                 <div class="row col-md-12 my-5 mx-0 p-0">
-                                    <div class="form-check col-md-2">
-                                        <label class="form-check-label">
-                                            <input type="radio" class="form-check-input" name="radioCustomerType"
-                                                id="radioPersonal" value="1" onclick="check()" checked>&nbsp;&nbsp;Cá
-                                            nhân
-                                        </label>
-                                    </div>
-                                    <div class="form-check col-md-2">
-                                        <label class="form-check-label">
-                                            <input type="radio" class="form-check-input" name="radioCustomerType"
-                                                id="radioEnterprise" value="2" onclick="check()">&nbsp;&nbsp;Doanh
-                                            nghiệp
-                                        </label>
-                                    </div>
-                                    <input id="txtChannel" class="form-control mr-3 col-md-2" type="text"
-                                        placeholder="Số kênh cao cấp">
-                                    <input id="txtConnection" class="form-control mr-3 col-md-2" type="number"
-                                        placeholder="Số kết nối">
+                                    <input id="txtNum" class="form-control mr-3 col-md-2" type="number">
                                 </div>
-                                <button id="btnCountCost" class="col-md-2 btn">Tính tiền cáp<span>Tính tiền
-                                        cáp</span></button>
+                                <button id="btnFindSNT" class="col-md-2 btn">Tìm số nguyên tố<span>Tìm số nguyên tố</span></button>
                             </div>
                             <div class="pl-5 card-footer">
-                                <h2 id="txtResult__4">Kết quả: </h2>
+                                <h2 id="txtResult__5">Kết quả: </h2>
                             </div>
                         </div>
                     </div>
@@ -226,6 +189,7 @@
     <script src="./js/baitap_2.js"></script>
     <script src="./js/baitap_3.js"></script>
     <script src="./js/baitap_4.js"></script>
+    <script src="./js/baitap_5.js"></script>
 </body>
 
 </html>
